@@ -13,6 +13,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const openSans = Geist_Mono({
+  variable: "--font-open-sans",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: {
     default:'Learning Next Js', // a fallback for any child route that doesn't have the title
@@ -30,14 +35,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} antialiased`}
         >
         <NavBar/>
 
         {children}
-        <footer className="bg-blue-500 p-2">
-          <p>© 2025 Learning Next Js</p>
-        </footer>
       </body>
     </html>
   );

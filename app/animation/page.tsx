@@ -1,7 +1,5 @@
 import Counter from "@/components/Counter";
 
-const list = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
-
 export default function Page() {
   return (
     <div>
@@ -13,13 +11,7 @@ export default function Page() {
 
       <h1 className="animate-bounce-me">Animation</h1>
 
-      {
-        list.map((item, index) => (
-          <div key={index} className="animate-bounce">
-            {item}
-          </div>
-        ))
-      }
+      
 
       <p>This is from lywoo plus</p>
 
