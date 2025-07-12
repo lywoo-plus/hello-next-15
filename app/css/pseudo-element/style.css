@@ -1,0 +1,55 @@
+.image-wrapper {
+  position: relative;
+}
+
+.image-wrapper::after {
+  content: 'hover me';
+  background-color: rgba(19, 85, 177, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  backdrop-filter: blur(5px);
+  transition: background .3s;
+}
+
+.image-wrapper:hover::after {
+  content: '';
+  backdrop-filter: blur(0);
+  background: none;
+}
+
+.list {
+  list-style-type:'🌵';
+}
+.list-item::marker {
+  content: '😺';
+}
+
+.list-item::selection {
+  background-color: red;
+}
+
+.input {
+  border: 1px solid red;
+}
+.input::placeholder {
+  color: red;
+}
+
+.checkbox {
+  accent-color: blueviolet;
+}
+.checkbox:checked + label {
+  background-color: blueviolet;
+  color: white;
+}
